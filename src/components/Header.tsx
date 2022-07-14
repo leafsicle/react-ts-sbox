@@ -1,17 +1,14 @@
 import React from "react"
-//title
-// isActive
-// 
 
 type Props = {
   title: string,
-  isActive: boolean
+  isActive?: boolean
 }
-const Head = ({ title, isActive }: Props) => {
+const Head = ({ title = "Regular Milk", isActive = true }: Props) => {
   return (
     <header className="App-header">
       <h1>{title}</h1>
-      {isActive && <h3>Active</h3>}
+      {isActive && <h3>isActive is in fact Active</h3>}
     </header >
   )
 }
